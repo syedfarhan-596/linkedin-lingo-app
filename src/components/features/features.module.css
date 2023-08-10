@@ -1,0 +1,12 @@
+.featurescontainer{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+}
+.featurescontainer>div{
+    margin: 5%;
+}
+.featurescontainer>div>img:hover{
+    transition: 1s ease-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}

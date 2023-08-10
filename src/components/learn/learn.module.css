@@ -1,0 +1,24 @@
+.what::after{
+    content: "";
+    display: block;
+    width:100%;
+    height: 10px;
+    background-color: gray;
+}
+.countires{
+    width: 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+.languagecontainer{
+    width: 100%;
+}
+.contries:hover{
+    transition: 1s ease-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.container{
+    border: 10px solid gray ;
+}
