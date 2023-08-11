@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 import React, { useState } from "react";
 import Joyride from "react-joyride";
-const Home =() => {
+const Home =(props) => {
     const [{ run, steps },] = useState({
         run: true,
         steps: [
@@ -80,10 +80,10 @@ const Home =() => {
                     <div>
                     
                     <Link href='#'><img className={`mx-2 ${classes.logo}`} src={logo} alt='logo' /></Link>
-                    <button  className={`btn btn-dark ${classes.darkmode}`}><span className='bi bi-lightbulb-off'></span></button>
+                    <button onClick={()=>props.setShow(!props.show)}  className={`btn btn-dark ${classes.darkmode}`}><span className={`bi bi-lightbulb-${props.show?'fill':'off'}`}></span></button>
                     </div>
                     
-                <nav>
+                <nav className={classes.links}>
                     <Link id="home1" className='mx-3 text-black h3' to="#home">Home</Link>
                     <Link id="continue1" className='mx-3 text-black h3 ' to="#continue">Continue </Link>
                     <Link id="tracking1" className='mx-3 text-black h3' to="#tracking">Track </Link>
